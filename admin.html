@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description">
+        <title>admin</title>
+        <script></script>
+        <style>
+           body
+            {
+            
+             background-image: url("images/2.jpg");
+             background-repeat:repeat ;
+            }
+            
+            h1
+            {
+             text-align : center ;
+             font-size : 60px;
+             color:white;
+             font-weight: bold;
+             background-color :rgba(0,0,0,0.6) ;
+             margin-top : 2px ;
+             border:1px solid;
+             border-radius:5px;
+            }
+            
+            input[type="text"] , input[type="password"] , input[type="submit"] 
+            
+            {
+             border: 2px solid black;
+             border-radius: 10px;
+             padding : 10px ;
+             background-color: #f8f8ff ;
+             width : 300px ;
+             margin : 8px ;
+             display:block ;
+            }
+            
+            textarea
+            {
+             display: block;
+             height:150px;
+             width : 400px;
+             border-radius:10px;
+            }
+             
+            label
+            {
+             font-size : 20px ;
+             font-weight: bold ;
+             color : #EDDEDE ;
+             display:block;
+             margin-bottom:5px;
+             
+            }
+            
+            fieldset
+            {
+             border : 3px  solid black ;
+             border-radius: 10px;
+             background-color : rgba(0,0,0,0.6);
+             width : 600px ;
+             margin : 30px;
+            }
+            
+            legend
+            {
+             border : 2px  solid black ;
+             border-radius: 4px;
+             background-color : #EFEFEF ;
+            }
+            
+            form
+            {
+              margin : 0 auto ;
+              position : relative;
+              top: 70%  ;
+              left : 28%  ;
+              padding : 0px ;
+            }
+             
+            button
+            {
+              background-color :#7aa8b7;
+              color:white ;
+              padding-right:25px ;
+              padding-left:25px;
+              padding-top :8px;
+              padding-bottom:8px;
+              border: 1px solid ;
+              border-radius:5px;
+            }
+            span
+            {
+               color: white ;
+            }
+        </style>
+    </head>
+    <body>
+        
+      <a href="home.html"><button style="float: right;background:#424242; color: white;width: 100px;height: 50px; "> Log out</button></a>
+      <br>
+        
+      <form name="admin">
+        
+        <fieldset>
+        <legend>Book's Information</legend>
+        
+        <label>Upload Book's File</label>
+        <input type="file">
+         
+        <br>
+        
+        <label>Upload Book's Cover</label>
+        <input type="file">
+        
+        <br>
+        
+        <label>Name of the book</label>
+        <input type="text" name="name of the book">
+        
+        <br>
+        <label>author</label>
+        <input type="text" name="author">
+        
+        <br>
+        
+        <label>Publication Date</label>
+        <input type="text" name="Publication date">
+        <br>
+        
+        <label>subject</label>
+        <input type="text" name="subject">
+        
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend>Your Describtion about the Book</legend>
+            <textarea></textarea>
+            <input type="submit" value="add">
+            
+        </fieldset>
+        
+      </form>
+         
+        
+    </body>
+</html>

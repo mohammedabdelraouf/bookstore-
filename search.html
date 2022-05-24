@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #myInput {
+            font-size: 16px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            width:300px;
+            height:40px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+           
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
+        
+        
+        *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("images/2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.6);
+    max-width: 550px;
+    width:100%;
+    border-radius:5px;
+    padding:15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btn {
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    background: #2f3640;
+}
+.search-btn .fas{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+
+}
+.wrapper .input
+{
+    border-radius: 5px;
+    padding:15px 20px;
+    width:85%;
+    font-weight: bold;
+}
+
+button
+{
+ background-color :#7aa8b7;
+ color:white ;
+ padding-right:25px ;
+ padding-left:25px;
+ padding-top :8px;
+ padding-bottom:8px;
+ border: 1px solid ;
+ border-radius:5px;
+}
+    </style>
+    <meta charset="utf-8">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>search box</title>
+</head>
+<body>
+    <a href="bookstore.html">
+     <button>bookstore</button>
+    </a>
+    <a href="contactus.html">
+     <button>contact</button>
+    </a>
+<div class="wrapper">
+    <label for="myInput"></label>
+    <input id="myInput" type="text" name="" placeholder="Type to search according to type" onkeyup="myFunction();">
+    <ul id="myUL" style="display:none">
+        <li><a href="bookstore.html#fantasy">Fantasy</a></li>
+        <li><a href="bookstore.html#romantic">Romantic</a></li>
+        <li><a href="bookstore.html#horror">Horror</a></li>
+        <li><a href="bookstore.html#comedy">comedy</a></li>
+        <li><a href="bookstore.html#history">History</a></li>
+        <li><a href="bookstore.html#action">Action</a></li>
+    </ul>
+    
+    <a class="search-btn" href="#">
+        <i class="fas fa-search"> </i>
+    </a>
+
+</div>
+<script>
+     function myFunction() {
+        let input, filter, ul, li, a, i, txtValue;
+		
+        input = document.getElementById("myInput");
+		
+        filter = input.value.toUpperCase();
+		
+        ul = document.getElementById("myUL");
+		
+        li = ul.getElementsByTagName("li");
+		
+		ul.style.display= "" ;
+        for (i = 0; i < li.length; i++)
+		{
+            a = li[i].getElementsByTagName("a")[0];
+			
+            txtValue = a.textContent || a.innerText;
+			
+            if (txtValue.toUpperCase().indexOf(filter) > -1)
+			{
+                li[i].style.display = "";
+            }
+			else
+			{
+                li[i].style.display = "none";
+				
+            }
+			
+		
+        }
+		if(input.value=="" || input.value==null)
+		{
+			ul.style.display="none" ;
+		}
+		
+    }
+</script>
+
+</body>
+</html>

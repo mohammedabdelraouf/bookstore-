@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>JavaScript Form Validation using a sample registration form</title>
+    <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+    <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+    <link rel='stylesheet' href='register.css' type='text/css' />
+    <script src="register.js"></script>
+</head>
+<body onload="document.registration.userid.focus();">
+<div calss="header">
+      <div id="header">
+            <a href="home.html"><button><b>home</b></button></a>     
+            <a href="aboutus.html"><button><b>About</b></button></a>
+            <a href="login.html"  style= "float: right; "><button><b>log in</b></button></a> <br>
+      </div>
+            <h1>Registration </h1>
+</div>
+<form name='registration' onSubmit="return formValidation();">
+    
+    <fieldset>
+        <label for="userid">User id:</label>
+        <input type="text" name="userid" size="12" />
+        <label for="passid">Password:</label></li>
+        <input type="password" name="passid" size="12" />
+        <label for="username">Name:</label></li>
+        <input type="text" name="username" size="50" />
+        <label for="email">Email:</label>
+        <input type="text" name="email" size="50" />
+        <label for="address">Address:</label></li>
+        <input type="text" name="address" size="50" />
+        <label for="country">Country:</label>
+        <select name="country">
+            <option selected="" value="Default">(Please select a country)</option>
+            <option value="AF">Australia</option>
+            <option value="AL">Canada</option>
+            <option value="DZ">India</option>
+            <option value="AS">Russia</option>
+            <option value="AD">USA</option>
+        </select>
+        <label for="zip">ZIP Code:</label>
+        <input type="text" name="zip" />
+        
+        <label id="gender">Sex:</label><br>
+        <input type="radio" name="sex" value="Male" /><span>Male</span><br>
+        <input type="radio" name="sex" value="Female" /><span>Female</span><br>
+        <label>Language:</label><br>
+        <input type="radio" name="lang" value="en" checked /><span>English</span><br>
+        <input type="radio" name="lang" value="noen" /><span>Non English</span><br>
+    </fieldset>
+    
+    
+    <fieldset>
+        <label for="desc">About:</label>
+        <textarea name="desc" id="desc"></textarea>
+        <input type="submit" name="submit" value="Submit" />
+    
+    </fieldset>
+</form>
+
+</body>
+</html>

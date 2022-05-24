@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chrset = "utf-8" >
+        <meta content= "width=device-width,initial-scale=1">
+        <title>log in</title>
+        <style>
+            body
+            {
+             background-image: url(images/2.jpg);
+             font-family:"times new roman" , Arial, sans-serif;
+             overflow-x: hidden;
+             position: relative;
+            }
+
+            h1
+            {
+             text-align : center ;
+             font-size : 60px;
+             color:white;
+             font-weight: bold;
+             background-color :rgba(0,0,0,0.6) ;
+             margin-top : 3px ;
+             border:1px solid;
+             border-radius:5px;
+            }
+
+            input[type="text"] , input[type="password"] , input[type="submit"]
+            {
+                border: 2px solid black;
+                border-radius: 10px;
+                padding : 10px ;
+                background-color: #f8f8ff ;
+                width : 300px ;
+                margin : 8px
+            }
+
+            label
+            {
+                font-size : 20px ;
+                font-weight: bold  ;
+                color :#EDDEDE ;
+                text-align:right ;
+            }
+
+            fieldset
+            {
+                border : 3px  solid black ;
+                border-radius: 10px;
+                background-color :rgba(0,0,0,0.6) ;
+                width : 600px ;
+            }
+
+            legend
+            {
+                border : 2px  solid black ;
+                border-radius: 4px;
+                background-color : #EFEFEF
+            }
+
+            form
+            {
+                margin : 0 auto ;
+                position : relative ;
+                top: 70%  ;
+                left : 28%  ;
+                padding : 0px ;
+            }
+
+            button
+             {
+              background-color :#7aa8b7;
+              color:white ;
+              padding-right:25px ;
+              padding-left:25px;
+              padding-top :8px;
+              padding-bottom:8px;
+              border: 1px solid ;
+              border-radius:5px;
+             }
+
+        </style>
+        <script>
+            function adminLogIn()
+            {
+                form1.style.display="none";
+                admin.style.display="";
+                adminbtn.style.display="none";
+                userbtn.style.display="";
+
+            }
+
+            function userLogIn()
+            {
+                form1.style.display="";
+                admin.style.display="none";
+                userbtn.style.display="none";
+                adminbtn.style.display="";
+            }
+
+            function validation()
+            {
+                if(adminName.value=="gehad" && adminPassword.value=="gehad")
+                {
+                    return true ;
+                }
+                else
+                {
+                    alert("wrong user name or password");
+                    return false;
+                }
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+            <button  id="adminbtn" onclick="adminLogIn();"><b>log in as admin</b></button>
+             <button  id="userbtn" onclick="userLogIn();"  style="display:none"><b>log in as a user</b></button>
+            <a href="home.html" ><button><b>home</b></button></a>
+            <a href="aboutus.html"><button><b>About</b></button></a>
+
+        <h1> Welcome dear.... </h1>
+
+        <!-- user logging form -->
+
+        <form name = "login" id="form1" action= "bookstore.html" >
+            <fieldset>
+                <legend> log in </legend>
+                <label> Username or E-mail </lable> <br>
+                <input type = "text"  name = "username" id="user" required >
+                <p id="error1"> </p>
+                <br>
+                <label>password</label><br>
+                <input type = "password"  name ="password" maxlength = "20"  id="password" required > <br>
+                <input type = "checkbox" name = "remember me" >
+                <label style ="font-size:14px ; text-align:right ">remember me</label> <br>
+
+                <input type = "submit" name = "login" value= "log in "  style = " background-color: #7aa8b7 ; width : 80px ; color : white ; font-weight: bold  ; " >
+
+                <a href ="register.html "  style="color :#EDDEDE"> Create new account?</a>
+            </fieldset>
+        </form>
+
+
+
+
+
+        <!-- admin logging form  hidden is the default  -->
+
+
+        <form name="loginAsAdmin" id="admin" action="admin.html"  style="display:none;"  onsubmit="return validation();" >
+
+	        <fieldset>
+                <legend> log in </legend>
+                <label> admin name </lable> <br>
+                <input type = "text"  name = "username" id="adminName" required >
+                <p id="error1"> </p>
+                <br>
+                <label>password</label><br>
+                <input type = "password"  name ="password" maxlength = "20"  id="adminPassword" required > <br>
+
+                <input type = "submit" name = "login" value= "log in "  style = " background-color: #7aa8b7 ; width : 80px ; color : white ; font-weight: bold  ; " >
+
+            </fieldset>
+
+	    </form>
+    </body>
+</html>

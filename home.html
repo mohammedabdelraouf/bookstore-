@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart of book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h2
+        {
+
+            color: white ;
+        }
+        p
+        {
+
+            color: white ;
+        }
+
+
+        body {
+            background: url("https://collegeinfogeek.com/wp-content/uploads/2018/11/Essential-Books.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+    * {
+            box-sizing: border-box;
+       }
+
+    .mySlides {display: none;}
+
+
+    img {vertical-align: middle;}
+
+
+    .slideshow-container
+        {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            margin-top :10px;
+        }
+
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .number_text {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active
+        {
+            background-color: #717171;
+        }
+
+
+        .fade
+        {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+
+        @-webkit-keyframes fade
+        {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade
+        {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+
+        @media only screen and (max-width: 300px)
+        {
+            .text {font-size: 11px}
+        }
+
+
+        button
+        {
+         background-color :#7aa8b7;
+         color:white ;
+         padding-right:25px ;
+         padding-left:25px;
+         padding-top :8px;
+         padding-bottom:8px;
+         border: 1px solid ;
+         border-radius:5px;
+         margin-bottom:3px;
+        }
+
+        #welcom
+        {
+        background-color : rgba(0,0,0,0.6) ;
+        padding-right:25px ;
+        padding-left:25px;
+        text-align:center;
+        border: 1px solid white ;
+        border-radius:5px;
+        }
+
+    </style>
+</head>
+<body>
+
+        <a href="aboutus.html"><button><b>About</b></button></a>
+        <a href="login.html"  style= "float: right; "><button><b>log in</b></button></a> <br>
+
+<div id="welcom" >
+<h2> welcome </h2>
+<p><strong>Please take a look on categories of the available books</strong></p>
+</div>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="number_text">1 / 5</div>
+        <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/05/31/15/x-men-dark-phoenix.jpg" alt="action" width="100%" height="600px">
+        <div class="text">Action Category</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="number_text">2 / 5</div>
+        <img src="https://e7.pngegg.com/pngimages/590/969/png-clipart-silhouette-of-people-holding-hands-romance-silhouette-holding-hands-couple-holding-hands-love-hand.png" alt="romantic" width="1000px" height="600px">
+        <div class="text">Romantic Category</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="number_text">3 / 5</div>
+        <img src="https://4images.cgames.de/images/gamestar/226/fantasy-general-2_6078083.jpg" alt="fantasy" style="width:100%">
+        <div class="text">Fantasy Category</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="number_text">4 / 5</div>
+        <img src="https://res.cloudinary.com/jerrick/image/upload/fl_progressive,q_auto,w_1024/hmimkxwlkbnpgdpmfe5i.jpg" alt="science fiction" width="100%" height="580px">
+        <div class="text">Science Fiction Category</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="number_text">5 / 5</div>
+        <img src="https://brewminate.com/wp-content/uploads/2020/02/GeorgeThompsonTeachingHistory01.png" alt="history" width="1000px" height="580px">
+        <div class="text">History Category</div>
+    </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length ) {slideIndex = 1 ; }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+</html>
